@@ -1,9 +1,10 @@
 import { tweet } from "./tweet.ts";
 
 Deno.serve(async (req: Request) => {
-  if (req.method !== "POST" || new URL(req.url).pathname !== "/tweet") {
+  const url = new URL(req.url);
+  if (req.method !== "POST" || url.pathname !== "/tweet") {
     return new Response(
-      'Usage: curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer your-secret" -d \'{"text":"Hello!"}\' https://your-app.deno.dev/tweet',
+      `Usage: curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer your-secret" -d \'{"text":"Hello!"}\' ${url.origin}/tweet`,
       { status: 404 }
     );
   }
