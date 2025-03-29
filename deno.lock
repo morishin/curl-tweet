@@ -1,0 +1,11 @@
+{
+  "version": "4",
+  "specifiers": {
+    "npm:twitter-api-v2@1.18.1": "1.18.1"
+  },
+  "npm": {
+    "twitter-api-v2@1.18.1": {
+      "integrity": "sha512-6pChAlfH/7VakKnPfVdG2fjxVJJgKCXvvWhuEOCdJ52Y+rzmAmsnTKDgjhnj11XgboSYQx1bn3j2VWyR+vnRiA=="
+    }
+  }
+}
